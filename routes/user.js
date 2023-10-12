@@ -7,7 +7,9 @@ const {
   createUser,
 } = require("../controller/userController");
 
-router.route("User").get(getUser);
-router.route("User").post();
-router.route("User").put();
-router.route("User/{id}").delete();
+router.route("/User").get(getUser);
+router.route("/User").post(createUser);
+router.route("/User").put();
+router.route("/User/{id}").delete();
+
+module.exports = router;
